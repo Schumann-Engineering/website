@@ -1,0 +1,6 @@
+Contact: mailto:schumann.engineering.security.no-reply@s-e.consulting
+Expires: 2023-02-10T17:04:00.000Z
+Acknowledgments: https://schumann.engineering/security-hall-of-fame
+Preferred-Languages: en, de
+Canonical: https://schumann.engineering/.well-known/security.txt
+Policy: https://schumann.engineering/security-policy
