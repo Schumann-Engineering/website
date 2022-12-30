@@ -1,0 +1,19 @@
+{
+  /* ==================
+   * VS CODE
+   * ================== */
+  "editor.tabSize": 4,  
+  "editor.insertSpaces": true,  
+  "files.trimFinalNewlines": true,
+
+
+  /* ==================
+   * EXTENSION: Markdown Preview Enhanced
+   * ================== */
+  "markdown-preview-enhanced.configPath": "${workspaceFolder}/.vscode/.extensions/markdown-preview-enhanced",
+  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+  "markdown-preview-enhanced.imageFolderPath": "/_images",
+  "markdown-preview-enhanced.previewTheme": "none.css",
+  // "markdown-preview-enhanced.codeBlockTheme":  "none.css",
+  "markdown-preview-enhanced.frontMatterRenderingOption": "code block"
+}
