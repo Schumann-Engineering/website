@@ -1,14 +1,15 @@
 ---
-title: How to rewrite a page prefix in Wordpress?
-post_author: janekschumann
-post_date: 2022/08/20
-post_status:    draft
+title:            How to rewrite a page prefix in Wordpress?
+post_author:      janekschumann
+post_date:        2022/08/20
+post_status:      draft
 post_excerpt:
+featured_image:   featured-image.webp
 menu_order:
 page_template:
-comment_status: closed
+comment_status:   closed
 stick_post:
-skip_file:
+skip_file:        no
 taxonomy:
     category:
         - software
