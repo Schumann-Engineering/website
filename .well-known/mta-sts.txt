@@ -2,4 +2,4 @@ version: STSv1
 mode: testing
 mx: mx01.onlineworkplace24.de
 mx: mx02.onlineworkplace24.de
-max_age: 3600
+max_age: 86400
