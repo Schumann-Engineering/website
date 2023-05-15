@@ -176,14 +176,14 @@ A clear statement - also for practical usage - provides US HIPAA (42 CFR § 164.
 ## Option 1: Data augmentation
 
 Apply statistical or scientific principles such
-'''
+```
 that the risk is very small that the information could be used, alone or in combination with other reasonably available information, by an anticipated recipient to identify an individual who is a subject of the information
-'''
+```
 (42 CFR § 164.514(b)(1)(i)
 *AND*
-'''
+```
 Documents the methods and results of the analysis that justify such determination
-'''
+```
 (42 CFR § 164.514(b)(1)(ii)
 
 > [!WARNING]
@@ -197,25 +197,25 @@ There are multiple categories of anonymisation methods used.
 
 ### Randomization - Noise Addition
 
-'''
+```
 When processing a dataset, an observer will assume that values are accurate but this will only be true to a certain degree. As an example, if an individual’s height was originally measured to the nearest centimetre the anonymised dataset may contain a height accurate to only +-10cm. If this technique is applied effectively, a third-party will not be able to identify an individual nor should he be able to repair the data or otherwise detect how the data have been modified.
-'''
+```
 Source: EU Article 29 Data Protection Working Party (WP 216) Chapter 3 Section 1.1
 
 
 ### Suppression (aka Removal)
 
-'''
+```
 In this method, certain values of the attributes are replaced by an asterisk '*'. All or some values of a column may be replaced by '*'. In the anonymised table below, we have replaced all the values in the 'Name' attribute and all the values in the 'Religion' attribute have been replaced by a '*'.
-'''
+```
 Source: Wikipedia
 
 
 ### Generalization (aka substitution)
 
-'''
+```
 In this method, individual values of attributes are replaced by with a broader category. For example, the value '19' of the attribute 'Age' may be replaced by ' ≤ 20', the value '23' by '20 < Age ≤ 30' , etc.
-'''
+```
 Source: Wikipedia
 
 
@@ -244,12 +244,6 @@ Source: Wikipedia
 > if at all possible, then option 2 is the best (legal) options!
 > 
 > Many will argue that information is 'absolutely business critical'. In such a case, the *ONLY* way to collect this data to begin with is by aquiring consent of the data subject *BEFORE* data collection.
-
-> **INFO**
-> if at all possible, then option 2 is the best (legal) options!
-> 
-> Many will argue that information is 'absolutely business critical'. In such a case, the *ONLY* way to collect this data to begin with is by aquiring consent of the data subject *BEFORE* data collection.
-
 
 > [!WARNING]
 > Both options imply that identifiable data is collected for the process of de-identification. Therefore, consent for the collection for the means of de-identification is required *PRIOR TO* data collection commences!
