@@ -34,7 +34,8 @@
 9. health information
 10. natural person’s sex life or sexual orientation
 
-> [!INFO]
+> :information_source: **INFO**
+>
 >'special categories of personal data' only fall under EU GDPR data protection rules IF they are also identifing a data subject or additional data make identification reasonable!
 >For example, 'member of the catholic church' (4.) or data recorded by an ECG device (9.) are special categories of personal data but are not automaticaly indentifyable on its own.
 >An abnormal ECG recorded from a catholic person in Afganistan, however, is reasonable identifiable, because only 200 / 0.0003% of the population are catholics.
@@ -162,7 +163,8 @@
 
 ## How to de-identify personal identifiable information?
 
-> [!INFO]
+> :information_source: **INFO**
+>
 > De-identification in a nutshell: alter the information to not be identifiable any longer (option 1) *OR* remove all identifiable information (option 2)
 
 A clear statement - also for practical usage - provides US HIPAA (42 CFR § 164.514(b)):
@@ -176,7 +178,8 @@ Apply statistical or scientific principles such
 > Documents the methods and results of the analysis that justify such determination
 (42 CFR § 164.514(b)(1)(ii)
 
-> [!WARNING]
+> :warning: **!WARNING**
+>
 > Documentation of which information is collected, which augmentation is applied and a rational why the result is deemed de-identified is highly important!
 
 ### Methods
@@ -202,7 +205,8 @@ Source: EU Article 29 Data Protection Working Party (WP 216) Chapter 3 Section 1
 
 #### Notes
 
-> [!WARNING]
+> :warning: **WARNING**
+>
 > An effective anonymisation solution prevents all parties from singling out an individual in a dataset, from linking two records within a dataset (or between two separate datasets) and from inferring any information in such dataset. *Generally speaking, therefore, removing directly identifying elements in itself is not enough to ensure that identification of the data subject is no longer possible.* It will often be necessary to take additional measures to prevent identification, once again depending on the context and purposes of the processing for which the anonymised data are intended.
 >
 > Source: EU Article 29 Group, Working Paper (WP 216) Chapter 2 Section 2.2Anonimization is performed on a record basis and not on the entire dataset. It is a common missconception that if single records are not linkable to a patient then a whole dataset does also not allow such link!
@@ -221,21 +225,26 @@ Source: EU Article 29 Data Protection Working Party (WP 216) Chapter 3 Section 1
 
 ### Notes
 
-> [!HINT]
+> :bulb: **HINT**
+>
 > if at all possible, then option 2 is the best (legal) options!
 >
 > Many will argue that information is 'absolutely business critical'. In such a case, the *ONLY* way to collect this data to begin with is by aquiring consent of the data subject *BEFORE* data collection.
 
-> [!WARNING]
+> :warning: **WARNING**
+>
 > Both options imply that identifiable data is collected for the process of de-identification. Therefore, consent for the collection for the means of de-identification is required *PRIOR TO* data collection commences!
 
-> [!NOTE]
+> :memo: **NOTE**
+>
 > A data processor which already lawfully collects data having the data subject's consent can also de-identify the collected information (if it is within the legal grounds for collection). Such de-identified information can be freely shared.
 
-> [!WARNING]
+> :warning: **WARNING**
+>
 > Option 1 leaves room for opinions on wheter the resulting information is to be considered non-identifyable or not. Therefore, the (legal) risk exposure is higher compared to option 2!
 
-> [!CAUTION]
+> :warning: **CAUTION**
+>
 > Some argue that encryption is not a valid way of de-identification because by definition it can be reversed.
 >
 > This is true only for the entity which holds the encryption key! To be more specific:
@@ -257,10 +266,12 @@ Laws taking precedense over data protection laws result in two things:
 1. They set forth the legal ground of collecting identifiable information
 2. Consent of the data subject / individual is not required
 
-> [!WARNING]
+> :warning: **WARNING**
+>
 > The legal ground for the collection of such data is also restricted to how such collected data can be processed!
 >
 > For example, the collection of an IP address might be required by a law, but only to answer requests from law enforcement agencies. This does not allow a data processor to use this data for other means as specified in such laws without consent of the data subject / individual!
 
-> [!WARNING]
+> :warning: **WARNING**
+>
 > In such a case the data subject / individual still has to be informed about the data collection under data protection laws!
