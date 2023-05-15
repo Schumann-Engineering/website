@@ -10,20 +10,20 @@
 >
 > The Cyber Supply Chain Management and Transparency Act of 2014 was US legislation that proposed to require government agencies to obtain software BOMs for any new products they purchase. It also would have required obtaining software BOMs for "any software, firmware, or product in use by the United States Government". Thought it ultimately didn't pass, this act did bring awareness to government and spurred later legislation such as "Internet of Things Cybersecurity Improvement Act of 2017."
 
-source: "Software Bill of Material (SBOM)", Wikipedia,  https://en.wikipedia.org/wiki/Software_bill_of_materials
+("Software Bill of Material (SBOM)", Wikipedia,  https://en.wikipedia.org/wiki/Software_bill_of_materials)
 
 
 # Abbreviations
 
-| **Abbreviation** | **Description**                         |
-| ------------ | ----------------------------------- |
-| CPE          | Common Product Enumeration          |
-| CVD          | Coordinated Vulnerablity Disclosure |
-| CVE          | Common Vulnerability Enumeration    |
-| IEC 62304    | IEC 62304:2006+A1:2015              |
-| PURL         | Package Manager URL                 |
-| SBOM         | Software Bill of Material           |
-| SOUP         | Software of Unknown Provenance      |
+| **Abbreviation** | **Description**                     |
+| :--------------- | :---------------------------------- |
+| CPE              | Common Product Enumeration          |
+| CVD              | Coordinated Vulnerablity Disclosure |
+| CVE              | Common Vulnerability Enumeration    |
+| IEC 62304        | IEC 62304:2006+A1:2015              |
+| PURL             | Package Manager URL                 |
+| SBOM             | Software Bill of Material           |
+| SOUP             | Software of Unknown Provenance      |
 
 
 # Data Formats
@@ -32,6 +32,7 @@ The [National Telecommunications and Information Administration (NTIA)](https://
 
 
 ## SPDX
+
 |                 |      |
 | :-------------- | :--- |
 | **Description** | An open standard for communicating software bill of material information, including components, licenses, copyrights, and security references. SPDX reduces redundant work by providing a common format for companies and communities to share important data, thereby streamlining and improving compliance. |
@@ -269,7 +270,7 @@ Each SBOM must comply with the following requirements:
     </tbody>
 </table>
 
-<p>Source: [NTIA](https://www.ntia.gov/SBOM), [Survey of Existing SBOMFormats and Standards](https://www.ntia.gov/files/ntia/publications/ntia_sbom_formats_and_standards_whitepaper_-_version_20191025.pdf)
+([NTIA](https://www.ntia.gov/SBOM), [Survey of Existing SBOMFormats and Standards](https://www.ntia.gov/files/ntia/publications/ntia_sbom_formats_and_standards_whitepaper_-_version_20191025.pdf))
 
 
 ## Additional Content
@@ -353,8 +354,10 @@ Each SBOM must comply with the following requirements:
     ]
 ```
 
-NOTE: wfn encodes " " with "_"
-NOTE: wfn encodes "." with "\\."
+> [!NOTE]
+> wfn encodes
+> * " " :arrow_right: "_"
+> * "." :arrow_right: "\\."
 
 
 ### cpe v2.3 notation
@@ -363,15 +366,18 @@ NOTE: wfn encodes "." with "\\."
 cpe:2.3:a:Name_of_vendor_w._a_dot:Windows_11:22621.521:*:22H2:*:*:*:*:
 ```
 
-NOTE: CPE encodes " " with "_"
-NOTE: CPE encodes "." with "."
+> [!NOTE]
+> CPE encodes
+> * " " :arrow_right: "_"
+> * "." :arrow_right: "."
 
 
 ## SPDX Example
 
 The following shows a very basic example of a device called "Rubics Cube", with a firmware having version "0815.42".
 
-NOTE: There is a RDF (= XML) version of SPDX as well, which is equivalent to the ```tag:value``` format shown in the example.
+> [!NOTE]
+> There is a RDF (= XML) version of SPDX as well, which is equivalent to the ```tag:value``` format shown in the example.
 
 ```
 ## =================================
