@@ -1,4 +1,6 @@
-# Introduction
+# Software Bill of Material (SBOM)
+
+## Introduction
 
 > A **SOFTWARE BILL OF MATERIAL** (software BOM) is a list of components in a piece of software. Software vendors often create products by assembling open source and commercial software components. The software BOM describes the components in a product. It is analogous to a list of ingredients on food packaging.
 >
@@ -10,10 +12,9 @@
 >
 > The Cyber Supply Chain Management and Transparency Act of 2014 was US legislation that proposed to require government agencies to obtain software BOMs for any new products they purchase. It also would have required obtaining software BOMs for "any software, firmware, or product in use by the United States Government". Thought it ultimately didn't pass, this act did bring awareness to government and spurred later legislation such as "Internet of Things Cybersecurity Improvement Act of 2017."
 
-("Software Bill of Material (SBOM)", Wikipedia,  https://en.wikipedia.org/wiki/Software_bill_of_materials)
+(source: "Software Bill of Material (SBOM)", Wikipedia,  https://en.wikipedia.org/wiki/Software_bill_of_materials)
 
-
-# Abbreviations
+## Abbreviations
 
 | **Abbreviation** | **Description**                     |
 | :--------------- | :---------------------------------- |
@@ -25,13 +26,11 @@
 | SBOM             | Software Bill of Material           |
 | SOUP             | Software of Unknown Provenance      |
 
-
-# Data Formats
+## Data Formats
 
 The [National Telecommunications and Information Administration (NTIA)](https://www.ntia.doc.gov/SoftwareTransparency) of the United States Department of Commerce recommends amongst others the following data formats for SBOMs:
 
-
-## SPDX
+### SPDX
 
 |                 |      |
 | :-------------- | :--- |
@@ -39,8 +38,7 @@ The [National Telecommunications and Information Administration (NTIA)](https://
 | **Link**        | (https://spdx.dev/) |
 | **Spec**        | (https://spdx.github.io/spdx-spec/)
 
-
-## CycloneDX
+### CycloneDX
 
 |                 |      |
 | :-------------- | :--- |
@@ -48,8 +46,7 @@ The [National Telecommunications and Information Administration (NTIA)](https://
 | **Link**        | (https://cyclonedx.org/) |
 | **Spec**        | (https://github.com/CycloneDX/specification) |
 
-
-# Requirements
+## Requirements
 
 Each SBOM must comply with the following requirements:
 
@@ -141,8 +138,7 @@ Each SBOM must comply with the following requirements:
     </tr>
 </table>
 
-
-# Minimum Content
+## Minimum Content
 
 <table>
     <colgroup>
@@ -270,10 +266,9 @@ Each SBOM must comply with the following requirements:
     </tbody>
 </table>
 
-([NTIA](https://www.ntia.gov/SBOM), [Survey of Existing SBOMFormats and Standards](https://www.ntia.gov/files/ntia/publications/ntia_sbom_formats_and_standards_whitepaper_-_version_20191025.pdf))
+(source: [NTIA](https://www.ntia.gov/SBOM), [Survey of Existing SBOMFormats and Standards](https://www.ntia.gov/files/ntia/publications/ntia_sbom_formats_and_standards_whitepaper_-_version_20191025.pdf))
 
-
-## Additional Content
+### Additional Content
 
 <table>
     <colgroup>
@@ -334,16 +329,13 @@ Each SBOM must comply with the following requirements:
     </tbody>
 </table>
 
+## Examples (informative)
 
-# Examples (informative)
+### Common Product Enumeration (CPE)
 
+#### wfn notation
 
-## Common Product Enumeration (CPE)
-
-
-### wfn notation
-
-```
+```text
     wfn:
     [
     part="a",
@@ -356,30 +348,30 @@ Each SBOM must comply with the following requirements:
 
 > [!NOTE]
 > wfn encodes
-> * " " :arrow_right: "_"
-> * "." :arrow_right: "\\."
-
+>
+> - " " :arrow_right: "_"
+> - "." :arrow_right: "\\."
 
 ### cpe v2.3 notation
 
-```
+```text
 cpe:2.3:a:Name_of_vendor_w._a_dot:Windows_11:22621.521:*:22H2:*:*:*:*:
 ```
 
 > [!NOTE]
 > CPE encodes
-> * " " :arrow_right: "_"
-> * "." :arrow_right: "."
+>
+> - " " :arrow_right: "_"
+> - "." :arrow_right: "."
 
-
-## SPDX Example
+### SPDX Example
 
 The following shows a very basic example of a device called "Rubics Cube", with a firmware having version "0815.42".
 
 > [!NOTE]
 > There is a RDF (= XML) version of SPDX as well, which is equivalent to the ```tag:value``` format shown in the example.
 
-```
+```text
 ## =================================
 ## SPDX v2.3.0, Chapter 2 Document Creation Information
 ## https://spdx.github.io/spdx-spec/v2.3/document-creation-information/
