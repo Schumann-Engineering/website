@@ -77,7 +77,7 @@
 #### 'Individually identifiable health information' (42 USC § 1320d(6), 45 CFR §160.103)
 
 > 'Individually identifiable health information' is information that is a subset of health information, including demographic information collected from an individual, and:
-> 
+>
 > 1. Is created or received by a health care provider, health plan, employer, or health care clearinghouse; and
 > 2. Relates to the past, present, or future physical or mental health or condition of an individual; the provision of health care to an individual; or the past, present, or future payment for the provision of health care to an individual; and
 >  i. That identifies the individual; or
@@ -99,17 +99,47 @@
 
 ### FR CNIL
 
-| Personal data types                  | Personal data categories |
-| ------------------------------------ | ------------------------ |
-| Common personal data                 | Civil status, identity, identification data |
-|                                      | Personal life (living habits, marital status, etc. –excluding sensitive or dangerous data) |
-|                                      | Professional life (résumé, education and professional training, awards, etc.) |
-|                                      | Economic and financial information (income, financial situation, tax situation, etc.) |
-|                                      | Connection data (IP addresses, event logs, etc.) |
-|                                      | Location data (travels, GPS data, GSM data, etc.) |
-| Personal data perceived as sensitive | Social security number   |
-|                                      | Biometric data           |
-|                                      | Bank data                |
+<table>
+  <colgroup>
+      <col style="width: 50%;" />
+      <col style="width: 50%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th>Personal data types</th>
+      <th>Personal data categories</th>
+    </tr>
+    <tr>
+      <td rowspan="6">Common personal data</td>
+      <td>Civil status, identity, identification data</td>
+    </tr>
+    <tr>
+      <td>Personal life (living habits, marital status, etc. –excluding sensitive or dangerous data)</td>
+    </tr>
+    <tr>
+      <td>Professional life (résumé, education and professional training, awards, etc.)</td>
+    </tr>
+    <tr>
+      <td>Economic and financial information (income, financial situation, tax situation, etc.)</td>
+    </tr>
+    <tr>
+      <td>Connection data (IP addresses, event logs, etc.)</td>
+    </tr>
+    <tr>
+      <td>Location data (travels, GPS data, GSM data, etc.)</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Personal data perceived as sensitive</td>
+      <td>Social security number</td>
+    </tr>
+    <tr>
+      <td>Biometric data</td>
+    </tr>
+    <tr>
+      <td>Bank data</td>
+    </tr>
+  </tbody>
+</table>
 
 (source: 'Guidelines - Privacy Impact Assessment (PIA) 3: Knowledge Bases', CNIL, 2018-02)
 
@@ -158,8 +188,13 @@
 
 ## How can data be used without legal grounds or for different means?
 
-*Option 1:* ask consent from the data subject to get legal grounds or amend the means.
-*Option 2:* anonymize / de-identify collected data such that it isn't considered identifiable and thus does not fall under privacy regulations
+In order of priority:
+
+1. ask consent from the data subject to get legal grounds or amend the means. ;)
+2. anonymize / de-identify collected data such that it isn't considered identifiable and thus does not fall under privacy regulations
+  i. data removal
+  ii. data augmentation
+  iii. expert determination of remaining risk
 
 ## How to de-identify personal identifiable information?
 
@@ -169,49 +204,9 @@
 
 A clear statement - also for practical usage - provides US HIPAA (42 CFR § 164.514(b)):
 
-### Option 1: Data augmentation
+![42 CFR § 164.514(b)](./42-CFR-164-514.svg)
 
-Apply statistical or scientific principles such
-> that the risk is very small that the information could be used, alone or in combination with other reasonably available information, by an anticipated recipient to identify an individual who is a subject of the information
-(42 CFR § 164.514(b)(1)(i)
-*AND*
-> Documents the methods and results of the analysis that justify such determination
-(42 CFR § 164.514(b)(1)(ii)
-
-> :warning: **!WARNING**
->
-> Documentation of which information is collected, which augmentation is applied and a rational why the result is deemed de-identified is highly important!
-
-### Methods
-
-There are multiple categories of anonymisation methods used.
-
-#### Randomization - Noise Addition
-
-> When processing a dataset, an observer will assume that values are accurate but this will only be true to a certain degree. As an example, if an individual’s height was originally measured to the nearest centimetre the anonymised dataset may contain a height accurate to only +-10cm. If this technique is applied effectively, a third-party will not be able to identify an individual nor should he be able to repair the data or otherwise detect how the data have been modified.
-Source: EU Article 29 Data Protection Working Party (WP 216) Chapter 3 Section 1.1
-
-#### Suppression (aka Removal)
-
-> In this method, certain values of the attributes are replaced by an asterisk '*'. All or some values of a column may be replaced by '*'. In the anonymised table below, we have replaced all the values in the 'Name' attribute and all the values in the 'Religion' attribute have been replaced by a '*'.
-
-(source: Wikipedia)
-
-#### Generalization (aka substitution)
-
-> In this method, individual values of attributes are replaced by with a broader category. For example, the value '19' of the attribute 'Age' may be replaced by ' ≤ 20', the value '23' by '20 < Age ≤ 30' , etc.
-
-(source: Wikipedia)
-
-#### Notes
-
-> :warning: **WARNING**
->
-> An effective anonymisation solution prevents all parties from singling out an individual in a dataset, from linking two records within a dataset (or between two separate datasets) and from inferring any information in such dataset. *Generally speaking, therefore, removing directly identifying elements in itself is not enough to ensure that identification of the data subject is no longer possible.* It will often be necessary to take additional measures to prevent identification, once again depending on the context and purposes of the processing for which the anonymised data are intended.
->
-> Source: EU Article 29 Group, Working Paper (WP 216) Chapter 2 Section 2.2Anonimization is performed on a record basis and not on the entire dataset. It is a common missconception that if single records are not linkable to a patient then a whole dataset does also not allow such link!
-
-### Option 2: Data removal
+### Option I: Data removal (aka 'safe habor')
 
 > [all 18 types of] identifiers of the individual or of relatives, employers, or household members of the individual, are removed
 
@@ -223,11 +218,11 @@ Source: EU Article 29 Data Protection Working Party (WP 216) Chapter 3 Section 1
 
 (source: 42 CFR § 164.514(b)(2)(i))
 
-### Notes
+#### Notes
 
 > :bulb: **HINT**
 >
-> if at all possible, then option 2 is the best (legal) options!
+> if at all possible, then option 2 is the best (legal) option!
 >
 > Many will argue that information is 'absolutely business critical'. In such a case, the *ONLY* way to collect this data to begin with is by aquiring consent of the data subject *BEFORE* data collection.
 
@@ -251,6 +246,73 @@ Source: EU Article 29 Data Protection Working Party (WP 216) Chapter 3 Section 1
 >
 > - symmetrical encryption is not de-identifing because the same encryption key can be used to decrypt data. Hence: the entity encryption can also decrypt.
 > - assymetrical encryption on the other hand is de-identifying *for the encrypting entity* because a different, private, key has to be known for decryption. If the encrypting entity does not - and will not be able to - get possition of this key, by definition, this entity cannot decrypt the information. Here: it is de-identified in the eyes of one entity but not de-identitified from another entities point of view (having knowledge about the private key)
+
+### Option IIa: Data augmentation
+
+Apply statistical or scientific principles such
+> that the risk is very small that the information could be used, alone or in combination with other reasonably available information, by an anticipated recipient to identify an individual who is a subject of the information
+
+(source: 42 CFR § 164.514(b)(1)(i)
+
+*AND*
+
+> Documents the methods and results of the analysis that justify such determination
+
+(source: 42 CFR § 164.514(b)(1)(ii)
+
+> :warning: **WARNING**
+>
+> Documentation of which information is collected, which augmentation is applied and a rational why the result is deemed de-identified is highly important!
+
+### Methods
+
+There are multiple categories of anonymisation methods used.
+
+#### Randomization - Noise Addition
+
+> When processing a dataset, an observer will assume that values are accurate but this will only be true to a certain degree. As an example, if an individual’s height was originally measured to the nearest centimetre the anonymised dataset may contain a height accurate to only +-10cm. If this technique is applied effectively, a third-party will not be able to identify an individual nor should he be able to repair the data or otherwise detect how the data have been modified.
+
+(source: EU Article 29 Data Protection Working Party (WP 216) Chapter 3 Section 1.1)
+
+#### Suppression (aka Removal)
+
+> In this method, certain values of the attributes are replaced by an asterisk '*'. All or some values of a column may be replaced by '*'. In the anonymised table below, we have replaced all the values in the 'Name' attribute and all the values in the 'Religion' attribute have been replaced by a '*'.
+
+(source: Wikipedia)
+
+#### Generalization (aka substitution)
+
+> In this method, individual values of attributes are replaced by with a broader category. For example, the value '19' of the attribute 'Age' may be replaced by ' ≤ 20', the value '23' by '20 < Age ≤ 30' , etc.
+
+(source: Wikipedia)
+
+#### Notes
+
+> :warning: **WARNING**
+>
+> An effective anonymisation solution prevents all parties from singling out an individual in a dataset, from linking two records within a dataset (or between two separate datasets) and from inferring any information in such dataset. *Generally speaking, therefore, removing directly identifying elements in itself is not enough to ensure that identification of the data subject is no longer possible.* It will often be necessary to take additional measures to prevent identification, once again depending on the context and purposes of the processing for which the anonymised data are intended.
+>
+> Source: EU Article 29 Group, Working Paper (WP 216) Chapter 2 Section 2.2Anonimization is performed on a record basis and not on the entire dataset. It is a common missconception that if single records are not linkable to a patient then a whole dataset does also not allow such link!
+
+### Option IIb: Risk assessment (aka 'expert determination')
+
+> Expert Determination takes a risk-based approach to de-identification that applies current standards and best practices from the research to determine the likelihood that a person could be identified from their protected health information. This method requires that a person with appropriate knowledge of and experience with generally accepted statistical and scientific principles and methods render the information not individually identifiable. It requires:
+>
+> 1. That the risk is very small that the information could be used alone, or in combination with other reasonably available information, by an anticipated recipient to identify an individual who is a subject of the information
+> 2. Documents the methods and results of the analysis that justify such a determination.
+
+(source: [Wikipedia](https://en.wikipedia.org/wiki/De-identification))
+
+#### Notes
+
+> :bulb: **HINT**
+>
+> a possible way of documentation is a Data Privacy Impact Assessment (DPIA).
+
+> :bulb: **HINT**
+>
+> United States Office of Civil Rights (OCR) and United States Department of Health and Human Services (HHS) issued a [Guidance  Regarding Methods for De-identification of Protected Health Information in Accordance with the Health Insurance Portability and Accountability Act
+(HIPAA) Privacy Rule](https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/understanding/coveredentities/De-identification/hhs_deid_guidance.pdf) in 2012.
 
 ## Are there any exceptions?
 

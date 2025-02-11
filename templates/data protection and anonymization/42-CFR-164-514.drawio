@@ -1,0 +1,43 @@
+<mxfile host="Electron" modified="2023-05-15T19:32:16.788Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="k4Vd2PmhjVipi-QH2aI1" version="21.2.8" type="device">
+  <diagram name="Page-1" id="Z8KnRIRVmSIijFhy1HQ1">
+    <mxGraphModel dx="769" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SQfwfhlLj27-d8G9dyds-11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="220" y="150" width="160" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="20" y="150" width="160" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="SQfwfhlLj27-d8G9dyds-2" target="SQfwfhlLj27-d8G9dyds-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="SQfwfhlLj27-d8G9dyds-2" target="SQfwfhlLj27-d8G9dyds-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-2" value="HIPAA Privacy Rule&lt;br&gt;De-identification Methods" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-3" value="Expert Determination&lt;br&gt;§ 164.514(b)(1)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#000000;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-4" value="Safe Harbor&lt;br&gt;§ 164.514(b)(2)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-6" value="Apply statistical or scientific principles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-7" value="Very small risk that anticipated recipient could identify individual" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-8" value="Removal of 18 types of identifiers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SQfwfhlLj27-d8G9dyds-9" value="No actial knowledge residual information can identify individual" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
